@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>监狱信息推送系统</title>
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=yes"/>
+    <meta name="msapplication-tap-highlight" content="no" />
+    <script src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body id="body" onload="getCityPoint()" >
+    <div id="select" class="select">
+        <label class="lblSelect">
+            <select class="selectPointOfInterest" title="Select points of interest nearby" id="province" onchange="getPoisonName();">
+                <option>请选择省份</option>
+                <option>山东省</option>
+                <option>四川省</option>
+                <option>广东省</option>
+            </select>
+        </label>
+        <label class="lblSelect">
+            <select class="selectPointOfInterest" title="Select points of interest nearby" id="poisonName" onchange="getPoisonData();">
+                <option>请选择监狱名</option>
+            </select>
+        </label>
+    </div>
+    <div id="main"></div>
+    <div id="light" class="white_content">
+        <div style="width:100%;height:20px" id="title">
+            <div id="doortitle"></div>
+            <div id="closedoor" onclick="document.getElementById('light').style.display='none';document.getElementById('light2').style.display='none'">×</div>
+        </div>
+        <div id="indoor">
+            <ul id="table_a">
+            </ul>
+        </div> 
+    </div> 
+
+    <div id="light2" class="white_content2">
+        <div style="width:30%;height:100%;background-color:#6495EE; float:left;">
+                <div style="width:100%;margin-top:10px"><img id="photo"  style="width:100%"></div>
+                <div style="width:100%;background-color:white;margin-top:20px;">
+                    <table>
+                        <tr><td style="text-align:right;background-color:gray">姓名:</td><td id="name">赵某某</td></tr>
+                        <tr><td style="text-align:right;background-color:gray">年龄:</td><td id="old">31</td></tr>
+                        <tr><td style="text-align:right;background-color:gray">性别:</td><td id="sex">男</td></tr>
+                        <tr><td style="text-align:right;background-color:gray">身份证号:</td><td id="id">510522198309160576</td></tr>
+                        <tr><td style="text-align:right;background-color:gray">户籍所在地:</td><td id="home">黑龙江省哈尔滨市</td></tr>
+                        <tr><td style="text-align:right;background-color:gray">现居监狱地:</td><td id="poison">山东省济南市第一监狱</td></tr>
+                        <tr><td style="text-align:right;background-color:gray" rowspan="2">常用联系人:</td><td id="phone">赵芳林：18399118765</td></tr>
+                        <tr><td>李琳：18209080706</td></tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 用于详细犯罪信息显示和短信推送详情显示 -->
+            <div style="height:100%;width:70%;background-color:#6495EE;float:left">
+                <div style="height:5%;width:95%;background-color:gray;margin:10px auto 0px;padding:3px;color:white;border:1px white solid">犯罪信息详情:</div>
+                <div style="height:25%;width:95%;background-color:white;margin:0px auto;padding:3px;overflow:scroll;overflow-x:hidden;border:1px white solid" id="text">
+                    显示犯罪的详细信息显示犯罪的详细信息显示犯罪的详细信息显示犯罪的详细信息显示犯罪的详细信息显示犯罪的详细信息显示犯罪的详细信息显示犯罪的详细信息显示犯罪的详细信息显示犯罪的详细信息显示犯罪的详细信息显示犯罪的详细信息显示犯罪的详细信息显示犯罪的详细信息显示犯罪的详细信息
+                </div>
+                <div style="height:5%;width:95%;background-color:gray;margin:10px auto 0px;padding:3px;color:white;border:1px white solid">短信发送记录:</div>
+                <div style="height:50%;width:95%;background-color:white;margin:0px auto 10px;padding:3px;overflow:scroll;overflow-x:hidden;border:1px white solid" id="message">
+                    <dl id="text2">
+                    </dl>
+                </div>
+            </div>
+    </div>
+
+    <script src="js/echarts.js"></script>
+    <script type="text/javascript"src="js/main.js"></script>
+</body>

@@ -1,0 +1,182 @@
+body{
+  background-color: #1b1b1b;
+  overflow:-Scroll;
+  /*设置主窗口y轴导航条禁用*/
+  overflow-y:hidden;
+}
+a{
+  color: white;
+}
+input{
+  /*width: 100%;*/
+  height: 25px;
+  padding: 0 65px 0 10px;
+  font-size: 12px;
+  border:0;
+  box-shadow: inset 1px 1px 11px rgba(0,0,0,.3);  
+} 
+input:focus { 
+  outline: none; 
+}
+select.selectPointOfInterest
+            {
+              background-color:#1b1b1b; 
+               width                    : 120pt;
+               height                   : 18pt;
+               line-height              : 16pt;
+               padding-right            : 20pt;
+               text-indent              : 4pt;
+               text-align               : left;
+               vertical-align           : middle;
+               box-shadow               : inset 0 0 0px #606060;
+               border                   : 1px solid #6495EE;
+               -moz-border-radius       : 3px;
+               -webkit-border-radius    : 3px;
+               border-radius            : 3px;
+               -webkit-appearance       : none;
+               -moz-appearance          : none;
+               appearance               : none;
+               font-family              : Arial,  Calibri, Tahoma, Verdana;
+               font-size                : 10pt;
+               font-weight              : 400;
+               color                    : #6495EE;
+               cursor                   : pointer;
+               outline                  : none;
+            }
+            select.selectPointOfInterest option
+            {
+                padding             : 4px 10px 4px 10px;
+                font-size           : 11pt;
+                font-weight         : normal;
+            }
+            select.selectPointOfInterest option[selected]{ font-weight:bold}
+            select.selectPointOfInterest option:nth-child(even) { background-color:#1b1b1b; }
+            select.selectPointOfInterest:hover {font-weight: 700;}
+            select.selectPointOfInterest:focus {box-shadow: inset 0 0 0px #6495EE; font-weight: 600;}
+ 
+            /*LABEL FOR SELECT*/
+            label.lblSelect{ position: relative; display: inline-block;}
+            /*DOWNWARD ARROW (25bc)*/
+            label.lblSelect::after
+            {
+                content                 : "\25bc";
+                position                : absolute;
+                top                     : 0;
+                right                   : 0;
+                bottom                  : 0;
+                width                   : 20pt;
+                line-height             : 20pt;
+                vertical-align          : middle;
+                text-align              : center;
+                background              : #6495EE;
+                color                   : #fefefe;
+               -moz-border-radius       : 0 3px 3px 0;
+               -webkit-border-radius    : 0 3px 3px 0;
+                border-radius           : 0 3px 3px 0;
+                pointer-events          : none;
+            }
+button{
+  /*position:fixed;left:0;top:3%;*/
+  /*position: absolute;*/
+  top: 5px;
+  right: 5px;
+  width: 55px;
+  height: 25px;
+  cursor: pointer;
+}
+select selectoption {
+text-indent: 2px;
+}
+table{
+  width: 100%;
+  color:white ;
+}
+tr{
+  background-color: #6495EE; 
+  border: 1px white solid ;
+  /*z-index:1001;  -moz-opacity: 0.2;  opacity:.20;  filter: alpha(opacity=20);*/
+}
+td{
+  border-collapse: collapse;
+}
+ul
+{
+  width:inherit;
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+li
+{
+  width: inherit;
+  background-color:gray; 
+
+}
+a:link,a:visited
+{
+  display:block;
+  width:100%;
+  font-weight:bold;
+  color:#FFFFFF;
+  text-align:center;
+  padding:4px;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+a:hover,a:active
+{
+  background-color:#6495EE;
+}
+  .black_overlay{
+    display: none;  
+    position: absolute;  
+    top: 0%;  left: 0%;  width: 100%;  height: 100%;  
+    background-color: black;  
+    z-index:1001;  -moz-opacity: 0.8;  opacity:.80;  filter: alpha(opacity=80);  }  
+  .white_content {  
+      display: none;  
+      position: absolute;  top: 10%;  left: 0;  
+      width: 15%;  height: 500px;border: 2px solid #6495EE;  
+        z-index:1002;  overflow: auto;filter: alpha(opacity=80);  }  
+  .white_content2 { 
+    background-color: #6495EE;
+      float:left; 
+      display: none;  
+      position: absolute;  top: 10%;  left: 17%;  
+      width: 80%;  height: 500px;
+        border: 2px solid #6495EE;  
+        z-index:1002;  overflow: auto;filter: alpha(opacity=80);  }  
+  .select{
+    position: fixed;
+    z-index:999;
+  }
+#indoor{
+  overflow:-Scroll;
+  overflow-x:hidden;
+}
+#title{
+  border-bottom: 1px gray solid;
+}
+#closedoor{
+  float:right;position:relative;
+  cursor:pointer;
+  width:10%;
+  height:20px;
+  text-align: center;
+  color: white;
+  background-color: red
+}
+#doortitle{
+  width: 90%;
+  float:left;position:relative;
+  height: 20px;
+  background-color: #6495EE;
+  color:#fff;
+}
+#message dt{
+  background-color: gray;
+}
+#message dd{
+  background-color: #6495EE;
+}
